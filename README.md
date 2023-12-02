@@ -6,7 +6,7 @@ Laravel курсы валют
 [![License](https://poser.pugx.org/liquetsoft/cbrfservice-laravel/license.svg)](https://packagist.org/packages/liquetsoft/cbrfservice-laravel)
 [![Build Status](https://github.com/liquetsoft/cbrfservice-laravel/workflows/cbrfservice_laravel/badge.svg)](https://github.com/liquetsoft/cbrfservice-laravel/actions?query=workflow%3A%22cbrfservice_laravel%22)
 
-Laravel bundle для [liquetsoft/cbrfservice](https://github.com/liquetsoft/cbrfservice).
+Laravel бандл для [liquetsoft/cbrfservice](https://github.com/liquetsoft/cbrfservice).
 
 
 
@@ -15,14 +15,7 @@ Laravel bundle для [liquetsoft/cbrfservice](https://github.com/liquetsoft/cbr
 1. Установить пакет с помощью composer:
 
     ```bash
-    composer require liquetsoft/fias-laravel
+    composer require liquetsoft/cbrfservice-laravel
     ```
 
-2. Бандл следует стандартной структуре, поэтому на `laravel >=5.5` зарегистрируется автоматически с помощью `Package Discovery`. Для более ранних версий провайдер нужно зарегистрировать самостоятельно, добавив его в `config/app.php`:
-
-    ```php
-    'providers' => [
-        // Other Service Providers
-        Liquetsoft\CbrfService\Laravel\LiquetsoftCbrfServiceBundleServiceProvider::class,
-    ],
-    ```
+2. Бандл зарегистрируется автоматически с помощью `Package Discovery`.
