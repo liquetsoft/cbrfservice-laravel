@@ -90,11 +90,11 @@ jobs:
       - name: Install Laravel
         run: |
           composer create-project laravel/laravel example-app ${{ matrix.laravel-version }}
-          cp ./github/assets/TestCommand.php ./example-app/app/Console/Commands/TestCommand.php
       - name: Install CBRF service
         run: |
           cd example-app
           composer req "liquetsoft/cbrfservice-laravel:dev-${{ steps.extract_branch.outputs.branch }}" -W
+          cp ./.github/assets/TestCommand.php ./example-app/app/Console/Commands/TestCommand.php
           php artisan config:clear
           php artisan cache:clear
           php artisan app:test
