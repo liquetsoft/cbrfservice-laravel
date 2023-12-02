@@ -94,7 +94,7 @@ jobs:
         run: |
           cd example-app
           composer req "liquetsoft/cbrfservice-laravel:dev-${{ steps.extract_branch.outputs.branch }}" -W
-          cp ./../assets/TestCommand.php ./example-app/app/Console/Commands/TestCommand.php
+          cp ./../assets/TestCommand.php ./app/Console/Commands/TestCommand.php
           php artisan config:clear
           php artisan cache:clear
           php artisan app:test
