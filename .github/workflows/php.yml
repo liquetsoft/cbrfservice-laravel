@@ -94,7 +94,11 @@ jobs:
         run: |
           cd example-app
           composer req "liquetsoft/cbrfservice-laravel:dev-${{ steps.extract_branch.outputs.branch }}" -W
+          mkdir -p ./app/Console/Commands
+          cp ./../assets/TestCommand.php ./app/Console/Commands/TestCommand.php
           php artisan config:clear
+          php artisan cache:clear
+          php artisan app:test
         env:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
           REDIS_PORT: ${{ job.services.redis.ports['6379'] }}
