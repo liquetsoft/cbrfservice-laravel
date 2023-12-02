@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Liquetsoft\CbrfService\Laravel\CbrfDailyWrapper;
 
-class TestCommand extends Command
+final class TestCommand extends Command
 {
     /**
      * The name and signature of the console command.
@@ -28,7 +30,7 @@ class TestCommand extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): void
     {
         dump($this->wrapper);
     }
