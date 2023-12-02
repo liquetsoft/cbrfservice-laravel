@@ -25,6 +25,7 @@ final class TestCommand extends Command
 
     public function __construct(private readonly CbrfDailyWrapper $wrapper)
     {
+        parent::__construct();
     }
 
     /**
