@@ -34,6 +34,7 @@ Laravel бандл для [liquetsoft/cbrfservice](https://github.com/liquetsoft
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Collection;
 use Liquetsoft\CbrfService\Laravel\CbrfDailyWrapper;
  
 class UserController extends Controller
@@ -42,7 +43,7 @@ class UserController extends Controller
         private readonly CbrfDailyWrapper $cbrfDaily,
     ) {}
 
-    public function getEnumValutes(): iterable
+    public function getEnumValutes(): Collection
     { 
         return $this->cbrfDaily->enumValutes();
     }
