@@ -49,3 +49,10 @@ class UserController extends Controller
     }
 }
 ```
+
+
+
+Методы
+------
+
+Описание методов находится на [сайте банка России](https://www.cbr.ru/development/DWS/).
