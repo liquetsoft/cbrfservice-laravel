@@ -1,5 +1,5 @@
 Laravel курсы валют
-===============
+===================
 
 [![Latest Stable Version](https://poser.pugx.org/liquetsoft/cbrfservice-laravel/v/stable.png)](https://packagist.org/packages/liquetsoft/cbrfservice-laravel)
 [![Total Downloads](https://poser.pugx.org/liquetsoft/cbrfservice-laravel/downloads.png)](https://packagist.org/packages/liquetsoft/cbrfservice-laravel)
