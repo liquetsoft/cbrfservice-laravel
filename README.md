@@ -39,7 +39,7 @@ use Liquetsoft\CbrfService\Laravel\CbrfDailyWrapper;
 class UserController extends Controller
 {
     public function __construct(
-        protected CbrfDailyWrapper $cbrfDaily,
+        private readonly CbrfDailyWrapper $cbrfDaily,
     ) {}
 
     public function getEnumValutes(): iterable
