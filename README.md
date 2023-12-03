@@ -20,3 +20,31 @@ Laravel бандл для [liquetsoft/cbrfservice](https://github.com/liquetsoft
     ```
 
 2. Бандл зарегистрируется автоматически с помощью `Package Discovery`.
+
+
+
+Использование
+-------------
+
+Сервис можно получить с помощью [Service Container](https://laravel.com/docs/10.x/container).
+
+```php
+<?php
+ 
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use Liquetsoft\CbrfService\Laravel\CbrfDailyWrapper;
+ 
+class UserController extends Controller
+{
+    public function __construct(
+        protected CbrfDailyWrapper $cbrfDaily,
+    ) {}
+
+    public function getEnumValutes(): iterable
+    { 
+        return $this->cbrfDaily->enumValutes();
+    }
+}
+```
